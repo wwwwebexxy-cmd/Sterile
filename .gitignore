@@ -1,0 +1,8 @@
+node_modules/
+.next/
+.next-local/
+.next-corrupt/
+out/
+.DS_Store
+*.log
+tsconfig.tsbuildinfo
