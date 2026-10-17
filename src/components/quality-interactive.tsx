@@ -50,9 +50,18 @@ function ShieldIcon() {
   );
 }
 
+function ChevronIcon({ open }: { open: boolean }) {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d={open ? "m15 6-6 6 6 6" : "m9 6 6 6-6 6"} />
+    </svg>
+  );
+}
+
 export function QualityInteractive() {
   const [activeStage, setActiveStage] = useState<QualityStage>("flow");
   const [isPaused, setIsPaused] = useState(false);
+  const [isToggleOpen, setIsToggleOpen] = useState(false);
   const active = stages.find((stage) => stage.id === activeStage) ?? stages[3];
 
   useEffect(() => {
@@ -78,13 +87,24 @@ export function QualityInteractive() {
     >
       <div className="quality-stamp"><ShieldIcon /><span>Quality<br /><strong>first</strong></span></div>
 
+      <button
+        className={`quality-toggle-trigger ${isToggleOpen ? "is-open" : ""}`}
+        type="button"
+        aria-expanded={isToggleOpen}
+        aria-controls="quality-stage-tabs"
+        aria-label={isToggleOpen ? "Close quality stages" : "Open quality stages"}
+        onClick={() => setIsToggleOpen((open) => !open)}
+      >
+        <ChevronIcon open={isToggleOpen} />
+      </button>
+
       <div className="quality-circle" key={active.id}>
         <img src={active.image} alt={active.imageAlt} />
         <span className="quality-circle-shade" />
         <span className="quality-stage-badge" aria-live="polite">{active.label}</span>
       </div>
 
-      <div className="quality-words" role="tablist" aria-label="Sterile quality stages">
+      <div id="quality-stage-tabs" className={`quality-words ${isToggleOpen ? "is-open" : ""}`} role="tablist" aria-label="Sterile quality stages">
         {stages.map((stage) => (
           <button
             className={`quality-word ${stage.id === active.id ? "is-active" : ""}`}
