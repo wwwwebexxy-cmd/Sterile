@@ -40,6 +40,7 @@ const heroSlides = [
 
 type IconName =
   | "arrow"
+  | "arrow-up"
   | "box"
   | "check"
   | "cup"
@@ -63,6 +64,7 @@ function Icon({ name }: { name: IconName }) {
 
   const paths: Record<IconName, React.ReactNode> = {
     arrow: <path d="M5 12h13m-5-5 5 5-5 5" />,
+    "arrow-up": <path d="M12 19V5m-5 5 5-5 5 5" />,
     box: (
       <>
         <path d="m4 7 8-4 8 4-8 4-8-4Z" />
@@ -183,6 +185,9 @@ export default function Home() {
         <span className="floating-whatsapp-icon"><Icon name="whatsapp" /></span>
         <span className="floating-whatsapp-copy"><small>WhatsApp</small>Chat with us</span>
       </a>
+      <a className="back-to-top" href="#top" aria-label="Back to top">
+        <Icon name="arrow-up" />
+      </a>
       <div className="topline">
         <div className="container topline-inner">
           <span>UAE-made medical disposables</span>
@@ -205,10 +210,6 @@ export default function Home() {
             <a href="#contact">Contact</a>
           </nav>
 
-          <a className="header-cta" href={`tel:${primaryPhone}`}>
-            <Icon name="phone" /><span className="header-cta-full">Call {primaryPhoneDisplay}</span><span className="header-cta-mobile">Call now</span>
-          </a>
-
           <details className="mobile-menu">
             <summary aria-label="Open menu"><span /><span /></summary>
             <nav aria-label="Mobile navigation">
@@ -218,6 +219,10 @@ export default function Home() {
               <a href="#contact">Contact</a>
             </nav>
           </details>
+
+          <a className="header-cta" href={`tel:${primaryPhone}`}>
+            <Icon name="phone" /><span className="header-cta-full">Call {primaryPhoneDisplay}</span><span className="header-cta-mobile">Call now</span>
+          </a>
         </div>
       </header>
 
