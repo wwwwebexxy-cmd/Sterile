@@ -1,5 +1,6 @@
 import { Reveal } from "../components/reveal";
 import { HeroCarousel } from "../components/hero-carousel";
+import { QualityInteractive } from "../components/quality-interactive";
 
 const mapUrl = "https://maps.app.goo.gl/EyXq4t2A1N3cCCjSA";
 const mapEmbedUrl = "https://www.google.com/maps?q=Al%20Jerf%20Industrial%202%2C%20Ajman%2C%20United%20Arab%20Emirates&output=embed";
@@ -292,12 +293,7 @@ export default function Home() {
       <section className="section quality-section" id="quality">
         <div className="container quality-grid">
           <Reveal className="reveal-column">
-            <div className="quality-art">
-              <div className="quality-stamp"><Icon name="shield" /><span>Quality<br /><strong>first</strong></span></div>
-              <div className="quality-words"><span>Material</span><span>Form</span><span>Finish</span><span>Flow</span></div>
-              <div className="quality-circle" />
-              <div className="quality-caption"><span>Every detail<br />has a job.</span><span>→</span></div>
-            </div>
+            <QualityInteractive />
           </Reveal>
           <Reveal className="reveal-column" delay={100}>
             <div className="quality-copy">

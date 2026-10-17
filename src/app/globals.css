@@ -135,13 +135,22 @@ h1 em, h2 em { color: var(--green-deep); font-style: normal; }
 .quality-section { background: var(--green-deep); color: var(--white); }
 .quality-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 110px; align-items: center; }
 .quality-art { min-height: 490px; position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,.18); border-radius: 30px; background: #315b38; }
-.quality-circle { position: absolute; width: 420px; height: 420px; border-radius: 50%; right: -105px; top: -70px; background: var(--green); opacity: .95; }
-.quality-circle:after { content: ""; position: absolute; inset: 30px; border: 1px solid rgba(39,72,46,.42); border-radius: 50%; }
+.quality-circle { position: absolute; width: 420px; height: 420px; border-radius: 50%; right: -105px; top: -70px; overflow: hidden; background: var(--green); opacity: .95; animation: quality-circle-in .55s ease both; }
+.quality-circle:after { content: ""; position: absolute; z-index: 2; inset: 30px; border: 1px solid rgba(39,72,46,.55); border-radius: 50%; pointer-events: none; }
+.quality-circle img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.75) contrast(1.05); animation: quality-image-in .55s ease both; }
+.quality-circle-shade { position: absolute; inset: 0; background: linear-gradient(145deg, rgba(139,195,74,.08), rgba(39,72,46,.55)); }
+.quality-stage-badge { position: absolute; z-index: 3; right: 52px; bottom: 60px; color: var(--white); background: rgba(39,72,46,.72); border: 1px solid rgba(255,255,255,.35); border-radius: 99px; padding: 8px 12px; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; font-weight: 800; }
+@keyframes quality-circle-in { from { opacity: .55; transform: scale(.96); } to { opacity: .95; transform: scale(1); } }
+@keyframes quality-image-in { from { opacity: .25; transform: scale(1.06); } to { opacity: 1; transform: scale(1); } }
 .quality-stamp { position: absolute; z-index: 2; left: 25px; top: 25px; display: flex; align-items: center; gap: 8px; color: var(--green-deep); background: var(--white); border-radius: 99px; padding: 11px 15px 11px 11px; font-size: 10px; line-height: 1.1; }
 .quality-stamp svg { width: 28px; }
 .quality-stamp strong { font-size: 15px; }
-.quality-words { position: absolute; left: 28px; bottom: 95px; display: flex; flex-direction: column; z-index: 2; color: rgba(255,255,255,.8); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; gap: 7px; }
-.quality-words span:nth-child(2) { margin-left: 30px; color: var(--white); }.quality-words span:nth-child(3) { margin-left: 60px; }.quality-words span:nth-child(4) { margin-left: 90px; color: var(--green); }
+.quality-words { position: absolute; left: 28px; bottom: 95px; display: flex; flex-direction: column; align-items: flex-start; z-index: 4; gap: 4px; }
+.quality-word { margin: 0; padding: 0; border: 0; background: transparent; color: rgba(255,255,255,.72); cursor: pointer; font: inherit; font-size: 12px; letter-spacing: .1em; line-height: 1.5; text-transform: uppercase; transition: color .2s ease, transform .2s ease; }
+.quality-word:nth-child(2) { margin-left: 30px; }.quality-word:nth-child(3) { margin-left: 60px; }.quality-word:nth-child(4) { margin-left: 90px; }
+.quality-word:hover, .quality-word:focus-visible { color: var(--white); transform: translateX(3px); }
+.quality-word.is-active { color: var(--green); }
+.quality-word:focus-visible { outline: 1px solid var(--green); outline-offset: 5px; border-radius: 3px; }
 .quality-caption { position: absolute; z-index: 2; bottom: 24px; left: 25px; right: 25px; display: flex; justify-content: space-between; font-size: 11px; line-height: 1.3; }
 .quality-caption span:last-child { color: var(--green); font-size: 20px; }
 .quality-copy .eyebrow { color: var(--green); }
@@ -245,7 +254,8 @@ h1 em, h2 em { color: var(--green-deep); font-style: normal; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal-ready, .product-card-media img, .catalogue-gallery figure img, .product-card, .floating-whatsapp, .back-to-top, .header-cta, .button { transition: none; }
+  .reveal-ready, .product-card-media img, .catalogue-gallery figure img, .product-card, .floating-whatsapp, .back-to-top, .header-cta, .button, .quality-word { transition: none; }
   .hero-carousel-image { animation: none; }
+  .quality-circle, .quality-circle img { animation: none; }
   .reveal-ready { opacity: 1; transform: none; }
 }
