@@ -184,43 +184,48 @@ export default function Home() {
         <span className="floating-whatsapp-icon"><Icon name="whatsapp" /></span>
         <span className="floating-whatsapp-copy"><small>WhatsApp</small>Chat with us</span>
       </a>
-      <div className="topline">
-        <div className="container topline-inner">
-          <span>UAE-made medical disposables</span>
-          <span className="topline-dot" />
-          <span>Al Jurf Industrial 2, Ajman</span>
-          <a href={`tel:${primaryPhone}`}>Call {primaryPhoneDisplay} <Icon name="arrow" /></a>
+      <div className="site-chrome">
+        <div className="topline">
+          <div className="container topline-inner">
+            <span>UAE-made medical disposables</span>
+            <span className="topline-dot" />
+            <span>Al Jurf Industrial 2, Ajman</span>
+            <a href={`tel:${primaryPhone}`}>Call {primaryPhoneDisplay} <Icon name="arrow" /></a>
+          </div>
         </div>
-      </div>
 
-      <header className="site-header">
-        <div className="container header-inner">
-          <a className="brand" href="#top" aria-label="Sterile Manufacturing home">
-            <span className="brand-image"><img src="/images/sterile-logo-transparent.png" alt="Sterile Manufacturing LLC" /></span>
-          </a>
+        <header className="site-header">
+          <div className="container header-inner">
+            <a className="brand" href="#top" aria-label="Sterile Manufacturing home">
+              <span className="brand-image"><img src="/images/sterile-logo-transparent.png" alt="Sterile Manufacturing LLC" /></span>
+            </a>
 
-          <nav className="desktop-nav" aria-label="Primary navigation">
-            <a href="#products">Products</a>
-            <a href="#quality">Quality</a>
-            <a href="#paper-cups">Paper cups</a>
-            <a href="#contact">Contact</a>
-          </nav>
-
-          <details className="mobile-menu">
-            <summary aria-label="Open menu"><span /><span /></summary>
-            <nav aria-label="Mobile navigation">
+            <nav className="desktop-nav" aria-label="Primary navigation">
               <a href="#products">Products</a>
               <a href="#quality">Quality</a>
+              <a href="#certification">Certification</a>
               <a href="#paper-cups">Paper cups</a>
               <a href="#contact">Contact</a>
             </nav>
-          </details>
 
-          <a className="header-cta" href={`tel:${primaryPhone}`}>
-            <Icon name="phone" /><span className="header-cta-full">Call {primaryPhoneDisplay}</span><span className="header-cta-mobile">Call now</span>
-          </a>
-        </div>
-      </header>
+            <details className="mobile-menu">
+              <summary aria-label="Open menu"><span /><span /></summary>
+              <nav aria-label="Mobile navigation">
+                <a href="#products">Products</a>
+                <a href="#quality">Quality</a>
+                <a href="#certification">Certification</a>
+                <a href="#paper-cups">Paper cups</a>
+                <a href="#contact">Contact</a>
+              </nav>
+            </details>
+
+            <a className="header-cta" href={`tel:${primaryPhone}`}>
+              <Icon name="phone" /><span className="header-cta-full">Call {primaryPhoneDisplay}</span><span className="header-cta-mobile">Call now</span>
+            </a>
+          </div>
+        </header>
+      </div>
+      <div className="site-chrome-spacer" aria-hidden="true" />
 
       <section className="hero" id="top">
         <div className="container hero-grid">
@@ -305,6 +310,26 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section certificate-section" id="certification">
+        <div className="container certificate-grid">
+          <Reveal className="reveal-column">
+            <div className="certificate-copy">
+              <p className="eyebrow">Quality, documented</p>
+              <h2>Confidence you can <em>put on paper.</em></h2>
+              <p className="section-intro">Sterile Manufacturing LLC’s quality management system has been independently assessed against ISO 9001:2015 for the manufacture of plastic medical disposables and paper products.</p>
+              <div className="certificate-meta"><span className="list-icon"><Icon name="shield" /></span><span><strong>ISO 9001:2015</strong><small>Quality management system</small></span></div>
+              <a className="text-link" href="/images/iso-26-27.webp" target="_blank" rel="noreferrer">View certificate <Icon name="arrow" /></a>
+            </div>
+          </Reveal>
+          <Reveal className="reveal-column" delay={100}>
+            <a className="certificate-frame" href="/images/iso-26-27.webp" target="_blank" rel="noreferrer" aria-label="Open the ISO 9001:2015 certificate in a new tab">
+              <img src="/images/iso-26-27.webp" alt="ISO 9001:2015 certificate for Sterile Manufacturing LLC" />
+              <span className="certificate-frame-label">ISO 9001:2015 / Certificate</span>
+            </a>
+          </Reveal>
+        </div>
+      </section>
+
       <section className="paper-section" id="paper-cups">
         <div className="container paper-grid">
           <Reveal className="reveal-column">
@@ -356,7 +381,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="site-footer"><div className="container footer-inner"><div className="footer-brand"><a className="brand footer-logo-link" href="#top" aria-label="Sterile Manufacturing home"><span className="brand-image"><img src="/images/sterile-logo-transparent.png" alt="Sterile Manufacturing LLC" /></span></a><p>UAE-made medical disposables<br />for the everyday work of care.</p></div><div className="footer-links"><a href="#products">Products</a><a href="#quality">Quality</a><a href="#paper-cups">Paper cups</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div><div className="footer-social"><span>Connect with Sterile</span><a className="footer-social-link" href="https://www.instagram.com/sterilemanufacturing/" target="_blank" rel="noreferrer" aria-label="Open Sterile Manufacturing on Instagram"><Icon name="instagram" /> @sterilemanufacturing <Icon name="arrow" /></a><a className="footer-social-link" href={mapUrl} target="_blank" rel="noreferrer" aria-label="Open Sterile Manufacturing location in Google Maps"><Icon name="map" /> Ajman, UAE <Icon name="arrow" /></a></div></div><div className="container legal-row"><span>© 2026 Sterile Manufacturing LLC. All rights reserved.</span><span>Made in Ajman, UAE</span></div></footer>
+      <footer className="site-footer"><div className="container footer-inner"><div className="footer-brand"><a className="brand footer-logo-link" href="#top" aria-label="Sterile Manufacturing home"><span className="brand-image"><img src="/images/sterile-logo-transparent.png" alt="Sterile Manufacturing LLC" /></span></a><p>UAE-made medical disposables<br />for the everyday work of care.</p></div><div className="footer-links"><a href="#products">Products</a><a href="#quality">Quality</a><a href="#certification">Certification</a><a href="#paper-cups">Paper cups</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div><div className="footer-social"><span>Connect with Sterile</span><a className="footer-social-link" href="https://www.instagram.com/sterilemanufacturing/" target="_blank" rel="noreferrer" aria-label="Open Sterile Manufacturing on Instagram"><Icon name="instagram" /> @sterilemanufacturing <Icon name="arrow" /></a><a className="footer-social-link" href={mapUrl} target="_blank" rel="noreferrer" aria-label="Open Sterile Manufacturing location in Google Maps"><Icon name="map" /> Ajman, UAE <Icon name="arrow" /></a></div></div><div className="container legal-row"><span>© 2026 Sterile Manufacturing LLC. All rights reserved.</span><span>Made in Ajman, UAE</span></div></footer>
     </main>
   );
 }
