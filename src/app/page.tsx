@@ -184,6 +184,7 @@ export default function Home() {
         <span className="floating-whatsapp-icon"><Icon name="whatsapp" /></span>
         <span className="floating-whatsapp-copy"><small>WhatsApp</small>Chat with us</span>
       </a>
+      <a className="back-to-top" href="#top" aria-label="Back to top"><Icon name="arrow" /><span>Top</span></a>
       <div className="site-chrome">
         <div className="topline">
           <div className="container topline-inner">
