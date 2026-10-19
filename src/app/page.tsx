@@ -283,7 +283,7 @@ export default function Home() {
             </a>
 
             <nav className="desktop-nav" aria-label="Primary navigation">
-              <a href="#products">Products</a>
+              <a href="#products">Medical Plastic Products</a>
               <a href="#quality">Quality</a>
               <a href="#certification">Certification</a>
               <a href="#paper-cups">Paper products</a>
@@ -293,7 +293,7 @@ export default function Home() {
             <details className="mobile-menu">
               <summary aria-label="Open menu"><span /><span /></summary>
               <nav aria-label="Mobile navigation">
-                <a href="#products">Products</a>
+                <a href="#products">Medical Plastic Products</a>
                 <a href="#quality">Quality</a>
                 <a href="#certification">Certification</a>
                 <a href="#paper-cups">Paper products</a>
@@ -481,7 +481,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="site-footer"><div className="container footer-inner"><div className="footer-brand"><a className="brand footer-logo-link" href="#top" aria-label="Sterile Manufacturing home"><span className="brand-image"><img src="/images/sterile-logo-transparent.png" alt="Sterile Manufacturing LLC" /></span></a><p>UAE-made medical disposables<br />for the everyday work of care.</p></div><div className="footer-links"><a href="#products">Products</a><a href="#quality">Quality</a><a href="#certification">Certification</a><a href="#paper-cups">Paper products</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div><div className="footer-social"><span>Connect with Sterile</span><a className="footer-social-link" href="https://www.instagram.com/sterilemanufacturing/" target="_blank" rel="noreferrer" aria-label="Open Sterile Manufacturing on Instagram"><Icon name="instagram" /> @sterilemanufacturing <Icon name="arrow" /></a><a className="footer-social-link" href={mapUrl} target="_blank" rel="noreferrer" aria-label="Open Sterile Manufacturing location in Google Maps"><Icon name="map" /> Ajman, UAE <Icon name="arrow" /></a></div></div><div className="container legal-row"><span>© 2026 Sterile Manufacturing LLC. All rights reserved.</span><span>Made in Ajman, UAE</span></div></footer>
+      <footer className="site-footer"><div className="container footer-inner"><div className="footer-brand"><a className="brand footer-logo-link" href="#top" aria-label="Sterile Manufacturing home"><span className="brand-image"><img src="/images/sterile-logo-transparent.png" alt="Sterile Manufacturing LLC" /></span></a><p>UAE-made medical disposables<br />for the everyday work of care.</p></div><div className="footer-links"><a href="#products">Medical Plastic Products</a><a href="#quality">Quality</a><a href="#certification">Certification</a><a href="#paper-cups">Paper products</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div><div className="footer-social"><span>Connect with Sterile</span><a className="footer-social-link" href="https://www.instagram.com/sterilemanufacturing/" target="_blank" rel="noreferrer" aria-label="Open Sterile Manufacturing on Instagram"><Icon name="instagram" /> @sterilemanufacturing <Icon name="arrow" /></a><a className="footer-social-link" href={mapUrl} target="_blank" rel="noreferrer" aria-label="Open Sterile Manufacturing location in Google Maps"><Icon name="map" /> Ajman, UAE <Icon name="arrow" /></a></div></div><div className="container legal-row"><span>© 2026 Sterile Manufacturing LLC. All rights reserved.</span><span>Made in Ajman, UAE</span></div></footer>
     </main>
   );
 }
