@@ -6,7 +6,7 @@ const mapUrl = "https://maps.app.goo.gl/EyXq4t2A1N3cCCjSA";
 const mapEmbedUrl = "https://www.google.com/maps?q=Al%20Jerf%20Industrial%202%2C%20Ajman%2C%20United%20Arab%20Emirates&output=embed";
 const primaryPhone = "+971503755006";
 const primaryPhoneDisplay = "+971 50 375 5006";
-const whatsappUrl = "https://wa.me/971547126700";
+const whatsappUrl = "https://wa.me/971503755006";
 
 const heroSlides = [
   {
@@ -125,12 +125,12 @@ function Icon({ name }: { name: IconName }) {
 }
 
 const plasticProducts = [
-  {
-    image: "/images/plastic/plastic-01-specimen-container.jpeg",
-    imageAlt: "Sterile specimen container sealed in a sterile pouch",
-    category: "Collection & containment",
-    title: "Specimen container",
-  },
+  // {
+  //   image: "/images/plastic/plastic-01-specimen-container.jpeg",
+  //   imageAlt: "Sterile specimen container sealed in a sterile pouch",
+  //   category: "Collection & containment",
+  //   title: "Specimen container",
+  // },
   {
     image: "/images/plastic/plastic-02-male-urinal-green.jpeg",
     imageAlt: "Green male urinal with graduated markings",
