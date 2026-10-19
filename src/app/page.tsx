@@ -315,19 +315,37 @@ export default function Home() {
         <div className="container certificate-grid">
           <Reveal className="reveal-column">
             <div className="certificate-copy">
-              <p className="eyebrow">Quality, documented</p>
+              <p className="eyebrow">Quality &amp; compliance</p>
               <h2>Confidence you can <em>put on paper.</em></h2>
-              <p className="section-intro">Sterile Manufacturing LLC’s quality management system has been independently assessed against ISO 9001:2015 for the manufacture of plastic medical disposables and paper products.</p>
-              <div className="certificate-meta"><span className="list-icon"><Icon name="shield" /></span><span><strong>ISO 9001:2015</strong><small>Quality management system</small></span></div>
-              <a className="text-link" href="/images/iso-26-27.webp" target="_blank" rel="noreferrer">View certificate <Icon name="arrow" /></a>
+              <p className="section-intro">From ISO 9001:2015 quality management to CE conformity for core medical disposable products, our certificates make the standards behind our work visible.</p>
+              <div className="certificate-meta"><span className="list-icon"><Icon name="shield" /></span><span><strong>Documented standards</strong><small>Quality system and product conformity</small></span></div>
+              <p className="certificate-note">The CE certificate covers kidney trays, specimen containers, medicine cups, rectangular basins, sharps containers, male urinals and HDPE bottles.</p>
             </div>
           </Reveal>
-          <Reveal className="reveal-column" delay={100}>
-            <a className="certificate-frame" href="/images/iso-26-27.webp" target="_blank" rel="noreferrer" aria-label="Open the ISO 9001:2015 certificate in a new tab">
-              <img src="/images/iso-26-27.webp" alt="ISO 9001:2015 certificate for Sterile Manufacturing LLC" />
-              <span className="certificate-frame-label">ISO 9001:2015 / Certificate</span>
-            </a>
-          </Reveal>
+          <div className="certificate-cards">
+            <Reveal className="reveal-card">
+              <a className="certificate-card" href="/images/ce-certificate-2026.pdf" target="_blank" rel="noreferrer" aria-label="Open the CE certificate in a new tab">
+                <div className="certificate-card-image"><img src="/images/ce-certificate-2026.png" alt="CE certificate for Sterile Manufacturing LLC, certificate AE10143U-2026" /></div>
+                <div className="certificate-card-body">
+                  <p className="certificate-card-kicker"><span /> CE certificate</p>
+                  <h3>Medical Devices Directive (93/42/EEC)</h3>
+                  <p>Certificate AE10143U-2026 · valid through 27 July 2029</p>
+                  <span className="text-link">Open certificate <Icon name="arrow" /></span>
+                </div>
+              </a>
+            </Reveal>
+            <Reveal className="reveal-card" delay={100}>
+              <a className="certificate-card" href="/images/iso-26-27.webp" target="_blank" rel="noreferrer" aria-label="Open the ISO 9001:2015 certificate in a new tab">
+                <div className="certificate-card-image"><img src="/images/iso-26-27.webp" alt="ISO 9001:2015 certificate for Sterile Manufacturing LLC" /></div>
+                <div className="certificate-card-body">
+                  <p className="certificate-card-kicker"><span /> Quality management</p>
+                  <h3>ISO 9001:2015</h3>
+                  <p>Quality management system certificate</p>
+                  <span className="text-link">Open certificate <Icon name="arrow" /></span>
+                </div>
+              </a>
+            </Reveal>
+          </div>
         </div>
       </section>
 
