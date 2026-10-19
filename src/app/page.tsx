@@ -10,11 +10,11 @@ const whatsappUrl = "https://wa.me/971503755006";
 
 const heroSlides = [
   {
-    src: "/images/plastic/plastic-01-specimen-container.jpeg",
-    alt: "Sterile specimen container sealed in a sterile pouch",
-    eyebrow: "Collection and containment",
-    caption: "Made for the moments that need to go right.",
-    detail: "Collection / containment",
+    src: "/images/plastic/plastic-02-male-urinal-green.jpeg",
+    alt: "Green male urinal with graduated markings",
+    eyebrow: "Patient care",
+    caption: "Designed for everyday care.",
+    detail: "Patient care / plastic range",
   },
   {
     src: "/images/plastic/plastic-04-sharps-container-red.jpeg",
