@@ -10,22 +10,22 @@ const whatsappUrl = "https://wa.me/971547126700";
 
 const heroSlides = [
   {
-    src: "/images/collection-containment.png",
-    alt: "Medical specimen containers, deep bottles and medicine cups arranged for collection workflows",
+    src: "/images/plastic/plastic-01-specimen-container.jpeg",
+    alt: "Sterile specimen container sealed in a sterile pouch",
     eyebrow: "Collection and containment",
     caption: "Made for the moments that need to go right.",
     detail: "Collection / containment",
   },
   {
-    src: "/images/safety-disposal.png",
-    alt: "Yellow sharps container and secure clinical waste containers for safer disposal",
+    src: "/images/plastic/plastic-04-sharps-container-red.jpeg",
+    alt: "Red sharps container with a secure lid",
     eyebrow: "Safety and disposal",
     caption: "Built around safer handling.",
     detail: "Safety / disposal",
   },
   {
-    src: "/images/patient-care.png",
-    alt: "Kidney tray, rectangular basin, male urinal and medicine cup for patient care",
+    src: "/images/plastic/plastic-10-kidney-tray-blue.jpeg",
+    alt: "Blue kidney tray for patient care and procedure use",
     eyebrow: "Patient care and procedure",
     caption: "Simple forms. Considered details.",
     detail: "Patient care / procedure",
@@ -124,33 +124,114 @@ function Icon({ name }: { name: IconName }) {
   );
 }
 
-const productGroups = [
+const plasticProducts = [
   {
-    icon: "box" as IconName,
-    image: "/images/collection-containment.png",
-    imageAlt: "Medical specimen containers, deep bottles and medicine cups arranged for collection workflows",
-    eyebrow: "Collection & containment",
-    title: "Containers that keep work moving",
-    copy: "Practical single-use formats for collection, storage and everyday clinical workflows.",
-    products: ["Specimen containers", "Stool containers", "Deep bottles", "Medicine cups"],
+    image: "/images/plastic/plastic-01-specimen-container.jpeg",
+    imageAlt: "Sterile specimen container sealed in a sterile pouch",
+    category: "Collection & containment",
+    title: "Specimen container",
   },
   {
-    icon: "shield" as IconName,
-    image: "/images/safety-disposal.png",
-    imageAlt: "Yellow sharps container and secure clinical waste containers for safer disposal",
-    eyebrow: "Safety & disposal",
-    title: "Designed around safer handling",
-    copy: "Dependable products that help teams manage sharps and contaminated waste with confidence.",
-    products: ["Sharps containers", "Biohazard-ready formats", "Secure closure options", "Institutional supply"],
+    image: "/images/plastic/plastic-02-male-urinal-green.jpeg",
+    imageAlt: "Green male urinal with graduated markings",
+    category: "Patient care",
+    title: "Male urinal · green",
   },
   {
-    icon: "drop" as IconName,
-    image: "/images/patient-care.png",
-    imageAlt: "Kidney tray, rectangular basin, male urinal and medicine cup for patient care",
-    eyebrow: "Patient care & procedure",
-    title: "Simple forms, considered details",
-    copy: "Clean, familiar shapes for patient care, bedside use and procedure-room routines.",
-    products: ["Male urinals", "Kidney trays", "Rectangular basins", "Custom requirements"],
+    image: "/images/plastic/plastic-03-male-urinal-red.jpeg",
+    imageAlt: "Red male urinal with graduated markings",
+    category: "Patient care",
+    title: "Male urinal · red",
+  },
+  {
+    image: "/images/plastic/plastic-04-sharps-container-red.jpeg",
+    imageAlt: "Red sharps container with a secure lid",
+    category: "Safety & disposal",
+    title: "Sharps container · red",
+  },
+  {
+    image: "/images/plastic/plastic-05-sharps-container-green.jpeg",
+    imageAlt: "Green sharps container with a secure lid",
+    category: "Safety & disposal",
+    title: "Sharps container · green",
+  },
+  {
+    image: "/images/plastic/plastic-06-safety-container-yellow-red.jpeg",
+    imageAlt: "Yellow safety container with a red closure",
+    category: "Safety & disposal",
+    title: "Safety container · red lid",
+  },
+  {
+    image: "/images/plastic/plastic-07-safety-container-yellow-blue.jpeg",
+    imageAlt: "Yellow safety container with a blue closure",
+    category: "Safety & disposal",
+    title: "Safety container · blue lid",
+  },
+  {
+    image: "/images/plastic/plastic-08-basin-yellow.jpeg",
+    imageAlt: "Yellow rectangular basin",
+    category: "Patient care",
+    title: "Rectangular basin · yellow",
+  },
+  {
+    image: "/images/plastic/plastic-09-sharps-container-yellow.jpeg",
+    imageAlt: "Yellow sharps container with biohazard marking",
+    category: "Safety & disposal",
+    title: "Sharps container · yellow",
+  },
+  {
+    image: "/images/plastic/plastic-10-kidney-tray-blue.jpeg",
+    imageAlt: "Blue kidney tray",
+    category: "Patient care",
+    title: "Kidney tray · blue",
+  },
+  {
+    image: "/images/plastic/plastic-11-basin-pink.jpeg",
+    imageAlt: "Pink rectangular basin",
+    category: "Patient care",
+    title: "Rectangular basin · pink",
+  },
+  {
+    image: "/images/plastic/plastic-12-kidney-tray-clear.jpeg",
+    imageAlt: "Clear kidney tray",
+    category: "Patient care",
+    title: "Kidney tray · clear",
+  },
+  {
+    image: "/images/plastic/plastic-13-medicine-cup.jpeg",
+    imageAlt: "Graduated medicine cup marked up to 30 millilitres",
+    category: "Collection & containment",
+    title: "Medicine cup · 30 ml",
+  },
+  {
+    image: "/images/plastic/plastic-14-kidney-tray-yellow.jpeg",
+    imageAlt: "Yellow kidney tray",
+    category: "Patient care",
+    title: "Kidney tray · yellow",
+  },
+  {
+    image: "/images/plastic/plastic-15-stool-container.jpeg",
+    imageAlt: "60 ml stool container with red lid",
+    category: "Collection & containment",
+    title: "Stool container · 60 ml",
+  },
+  {
+    image: "/images/plastic/plastic-16-urine-container.jpeg",
+    imageAlt: "60 ml urine container with a white lid",
+    category: "Collection & containment",
+    title: "Urine container · 60 ml",
+  },
+  {
+    image: "/images/plastic/plastic-17-specimen-container-packaged.jpeg",
+    imageAlt: "Specimen container sealed in a sterile pouch",
+    category: "Collection & containment",
+    title: "Specimen container · packaged",
+  },
+  {
+    image: "/images/plastic/plastic-18-male-urinal-white.jpeg",
+    imageAlt: "White male urinal with graduated markings",
+    category: "Patient care",
+    title: "Male urinal · white",
   },
 ];
 
@@ -205,7 +286,7 @@ export default function Home() {
               <a href="#products">Products</a>
               <a href="#quality">Quality</a>
               <a href="#certification">Certification</a>
-              <a href="#paper-cups">Paper cups</a>
+              <a href="#paper-cups">Paper products</a>
               <a href="#contact">Contact</a>
             </nav>
 
@@ -215,7 +296,7 @@ export default function Home() {
                 <a href="#products">Products</a>
                 <a href="#quality">Quality</a>
                 <a href="#certification">Certification</a>
-                <a href="#paper-cups">Paper cups</a>
+                <a href="#paper-cups">Paper products</a>
                 <a href="#contact">Contact</a>
               </nav>
             </details>
@@ -266,27 +347,55 @@ export default function Home() {
         <div className="container">
           <Reveal className="reveal-block">
             <div className="section-heading split-heading">
-              <div><p className="eyebrow">What we make</p><h2>Useful by design.<br /><em>Reliable</em> by habit.</h2></div>
-              <p className="section-intro">From a medicine cup at the bedside to a sharps container at the end of a procedure, our range is shaped around real healthcare routines.</p>
+              <div><p className="eyebrow">Plastic products</p><h2>Useful by design.<br /><em>Reliable</em> by habit.</h2></div>
+              <p className="section-intro">A broader view of our plastic medical disposables, shown in the product colours and formats supplied for this range.</p>
             </div>
           </Reveal>
 
-          <div className="product-grid">
-            {productGroups.map((group, index) => (
-              <Reveal className="reveal-card" delay={index * 100} key={group.eyebrow}>
-                <article className="product-card">
-                  <div className="product-card-media">
-                    <img src={group.image} alt={group.imageAlt} />
-                    <span className="card-icon"><Icon name={group.icon} /></span>
+          <div className="plastic-products-grid">
+            {plasticProducts.map((product, index) => (
+              <Reveal className="reveal-card" delay={(index % 4) * 70} key={`${product.title}-${index}`}>
+                <article className="plastic-product-card">
+                  <div className="plastic-product-media">
+                    <img src={product.image} alt={product.imageAlt} loading="lazy" />
+                    <span className="plastic-product-tag">{product.category}</span>
                   </div>
-                  <p className="eyebrow">{group.eyebrow}</p>
-                  <h3>{group.title}</h3>
-                  <p>{group.copy}</p>
-                  <ul>{group.products.map((product) => <li key={product}><Icon name="check" />{product}</li>)}</ul>
-                  <a href="#contact" className="text-link">Ask about this range <Icon name="arrow" /></a>
+                  <div className="plastic-product-body">
+                    <p className="eyebrow">{product.category}</p>
+                    <h3>{product.title}</h3>
+                    <a href="#contact" className="text-link">Ask about this product <Icon name="arrow" /></a>
+                  </div>
                 </article>
               </Reveal>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="paper-section" id="paper-cups">
+        <div className="container paper-grid">
+          <Reveal className="reveal-column">
+            <div className="paper-copy">
+              <p className="eyebrow">Paper products · custom cups</p>
+              <h2>Make every cup carry <em>your brand.</em></h2>
+              <p>Our paper cup range gives hospitality, events and institutional buyers a dependable canvas for hot drinks, brand stories and thoughtful design.</p>
+              <div className="cup-specs"><span>4 oz</span><span>6.5 oz</span><span>8 oz</span><span>12 oz</span></div>
+              <div className="paper-features"><span><Icon name="cup" /> Double-wall insulation</span><span><Icon name="spark" /> Custom printed</span><span><Icon name="drop" /> Brand-ready</span></div>
+              <a className="button button-light" href="#contact">Discuss your cup range <Icon name="arrow" /></a>
+            </div>
+          </Reveal>
+          <Reveal className="reveal-column" delay={100}>
+            <div className="paper-image-wrap"><img src="/images/paper-cups.png" alt="Custom double-wall paper cups in four sizes" /><div className="paper-image-tag">Double wall / custom print</div></div>
+          </Reveal>
+        </div>
+        <div className="container catalogue-gallery">
+          <Reveal className="reveal-block">
+            <div className="catalogue-gallery-heading"><p className="eyebrow">More from the catalogue</p><p>Browse the paper formats and custom-print directions shown in the supplied catalogue.</p></div>
+          </Reveal>
+          <div className="catalogue-gallery-grid">
+            <Reveal className="reveal-card"><figure><img src="/images/paper-catalogue-double-wall.png" alt="Double-wall and ripple paper cup catalogue page" /><figcaption>Double-wall and ripple cups</figcaption></figure></Reveal>
+            <Reveal className="reveal-card" delay={100}><figure><img src="/images/paper-catalogue-custom-cups.png" alt="Custom PET, U-shape and frosted cup catalogue page" /><figcaption>Custom printed cup formats</figcaption></figure></Reveal>
+            <Reveal className="reveal-card" delay={200}><figure><img src="/images/paper-catalogue-packaging.png" alt="Custom paper packaging catalogue page" /><figcaption>Paper packaging directions</figcaption></figure></Reveal>
           </div>
         </div>
       </section>
@@ -349,34 +458,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="paper-section" id="paper-cups">
-        <div className="container paper-grid">
-          <Reveal className="reveal-column">
-            <div className="paper-copy">
-              <p className="eyebrow">A second line for a different kind of everyday</p>
-              <h2>Make every cup carry <em>your brand.</em></h2>
-              <p>Our paper cup range gives hospitality, events and institutional buyers a dependable canvas for hot drinks, brand stories and thoughtful design.</p>
-              <div className="cup-specs"><span>4 oz</span><span>6.5 oz</span><span>8 oz</span><span>12 oz</span></div>
-              <div className="paper-features"><span><Icon name="cup" /> Double-wall insulation</span><span><Icon name="spark" /> Custom printed</span><span><Icon name="drop" /> Brand-ready</span></div>
-              <a className="button button-light" href="#contact">Discuss your cup range <Icon name="arrow" /></a>
-            </div>
-          </Reveal>
-          <Reveal className="reveal-column" delay={100}>
-            <div className="paper-image-wrap"><img src="/images/paper-cups.png" alt="Custom double-wall paper cups in four sizes" /><div className="paper-image-tag">Double wall / custom print</div></div>
-          </Reveal>
-        </div>
-        <div className="container catalogue-gallery">
-          <Reveal className="reveal-block">
-            <div className="catalogue-gallery-heading"><p className="eyebrow">More from the catalogue</p><p>Browse the paper formats and custom-print directions shown in the supplied catalogue.</p></div>
-          </Reveal>
-          <div className="catalogue-gallery-grid">
-            <Reveal className="reveal-card"><figure><img src="/images/paper-catalogue-double-wall.png" alt="Double-wall and ripple paper cup catalogue page" /><figcaption>Double-wall and ripple cups</figcaption></figure></Reveal>
-            <Reveal className="reveal-card" delay={100}><figure><img src="/images/paper-catalogue-custom-cups.png" alt="Custom PET, U-shape and frosted cup catalogue page" /><figcaption>Custom printed cup formats</figcaption></figure></Reveal>
-            <Reveal className="reveal-card" delay={200}><figure><img src="/images/paper-catalogue-packaging.png" alt="Custom paper packaging catalogue page" /><figcaption>Paper packaging directions</figcaption></figure></Reveal>
-          </div>
-        </div>
-      </section>
-
       <section className="section faq-section" id="faq">
         <div className="container faq-grid">
           <Reveal className="reveal-column"><div><p className="eyebrow">Straight answers</p><h2>Need the short<br /><em>version?</em></h2><p className="section-intro">Here are the questions buyers most often ask before they start a conversation.</p><a className="text-link" href="#contact">Ask something else <Icon name="arrow" /></a></div></Reveal>
@@ -400,7 +481,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="site-footer"><div className="container footer-inner"><div className="footer-brand"><a className="brand footer-logo-link" href="#top" aria-label="Sterile Manufacturing home"><span className="brand-image"><img src="/images/sterile-logo-transparent.png" alt="Sterile Manufacturing LLC" /></span></a><p>UAE-made medical disposables<br />for the everyday work of care.</p></div><div className="footer-links"><a href="#products">Products</a><a href="#quality">Quality</a><a href="#certification">Certification</a><a href="#paper-cups">Paper cups</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div><div className="footer-social"><span>Connect with Sterile</span><a className="footer-social-link" href="https://www.instagram.com/sterilemanufacturing/" target="_blank" rel="noreferrer" aria-label="Open Sterile Manufacturing on Instagram"><Icon name="instagram" /> @sterilemanufacturing <Icon name="arrow" /></a><a className="footer-social-link" href={mapUrl} target="_blank" rel="noreferrer" aria-label="Open Sterile Manufacturing location in Google Maps"><Icon name="map" /> Ajman, UAE <Icon name="arrow" /></a></div></div><div className="container legal-row"><span>© 2026 Sterile Manufacturing LLC. All rights reserved.</span><span>Made in Ajman, UAE</span></div></footer>
+      <footer className="site-footer"><div className="container footer-inner"><div className="footer-brand"><a className="brand footer-logo-link" href="#top" aria-label="Sterile Manufacturing home"><span className="brand-image"><img src="/images/sterile-logo-transparent.png" alt="Sterile Manufacturing LLC" /></span></a><p>UAE-made medical disposables<br />for the everyday work of care.</p></div><div className="footer-links"><a href="#products">Products</a><a href="#quality">Quality</a><a href="#certification">Certification</a><a href="#paper-cups">Paper products</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div><div className="footer-social"><span>Connect with Sterile</span><a className="footer-social-link" href="https://www.instagram.com/sterilemanufacturing/" target="_blank" rel="noreferrer" aria-label="Open Sterile Manufacturing on Instagram"><Icon name="instagram" /> @sterilemanufacturing <Icon name="arrow" /></a><a className="footer-social-link" href={mapUrl} target="_blank" rel="noreferrer" aria-label="Open Sterile Manufacturing location in Google Maps"><Icon name="map" /> Ajman, UAE <Icon name="arrow" /></a></div></div><div className="container legal-row"><span>© 2026 Sterile Manufacturing LLC. All rights reserved.</span><span>Made in Ajman, UAE</span></div></footer>
     </main>
   );
 }
