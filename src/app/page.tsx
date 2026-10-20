@@ -221,12 +221,12 @@ const plasticProducts = [
     category: "Collection & containment",
     title: "Urine container · 60 ml",
   },
-  {
-    image: "/images/plastic/plastic-17-specimen-container-packaged.jpeg",
-    imageAlt: "Specimen container sealed in a sterile pouch",
-    category: "Collection & containment",
-    title: "Specimen container · packaged",
-  },
+  // {
+  //   image: "/images/plastic/plastic-17-specimen-container-packaged.jpeg",
+  //   imageAlt: "Specimen container sealed in a sterile pouch",
+  //   category: "Collection & containment",
+  //   title: "Specimen container · packaged",
+  // },
   {
     image: "/images/plastic/plastic-18-male-urinal-white.jpeg",
     imageAlt: "White male urinal with graduated markings",
